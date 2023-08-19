@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Bold';
-    src: url(/assets/fonts/FiraSans/Bold.ttf);
+    src: url(/fonts/FiraSans/FiraSans-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Black';
-    src: url(/assets/fonts/FiraSans/Black.ttf);
+    src: url(/fonts/FiraSans/FiraSans-Black.ttf);
     font-weight: 900;
 }
 
@@ -47,7 +47,7 @@ a {
     z-index: 1;
     background: #FF7E00;
     display: inline-block;
-    padding: 5px 47px;
+    padding: 5px 75px;
     border-radius: 8px;
     opacity: 1;
     transition: all .7s ease;
@@ -76,7 +76,6 @@ a {
 .main-content {
     display: flex;
     justify-content: space-evenly;
-    /* position: relative; */
 }
 
 .main-content-inner {
@@ -86,19 +85,16 @@ a {
 .main-content-text {
     position: relative;
     text-align: center;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; */
+
 }
 
 .main-title {
     font-family: 'Black', sans-serif;
     text-align: center;
     font-size: 56px;
-    font-weight: 900;
     line-height: 87px;
-    background: linear-gradient(180deg, #E9661C 0%, #FFC20E 100%);
+    background: linear-gradient(180deg, #E9661C 30%, #FFC20E 70%);
+    /* background: linear-gradient(180deg, rgb(233, 102, 28) 6%, rgb(255, 194, 14) 89%); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -116,7 +112,6 @@ a {
     color: #fff;
     text-align: center;
     font-family: 'Bold', sans-serif;
-    font-weight: 700;
     font-size: 48px;
     line-height: 8px;
     margin-bottom: 70px;
@@ -130,7 +125,6 @@ a {
     color: #F4FBE0;
     text-align: center;
     font-family: 'Bold', sans-serif;
-    font-weight: 700;
 
     font-size: 32px;
     line-height: 70px;
@@ -141,7 +135,7 @@ a {
 .gem-left {
     position: absolute;
     top: 400px;
-    left: -190px;
+    left: -165px;
 }
 
 .octopus {
@@ -152,7 +146,6 @@ a {
 
 .main-content-image {
     position: relative;
-
 }
 
 .slot-machine {
@@ -163,8 +156,8 @@ a {
 
 .gem-right {
     position: absolute;
-    top: 135px;
-    left: -180px;
+    top: 120px;
+    left: -190px;
 }
 
 /* создаем ключевую анимацию для элемента */
@@ -190,3 +183,89 @@ a {
     animation: float 3s ease-in-out infinite;
     /* 3s - время одного цикла анимации, ease-in-out - для плавного старта и остановки, infinite - для бесконечного повторения */
 }
+
+@media screen and (max-width: 1439px) {
+    .main-content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .main-title {
+        font-size: 36px;
+        line-height: 65px;
+    }
+
+    .main-subtitle {
+        margin-bottom: 45px;
+    }
+
+    .main-desc {
+        margin-bottom: 50px;
+    }
+
+    .main-link {
+        font-size: 25px;
+    }
+
+    .title-big {
+        font-size: 64px;
+    }
+
+    .octopus {
+        width: 235px;
+        right: -206px;
+        bottom: -10px;
+    }
+
+    .gem-left {
+        width: 650px;
+    }
+
+    .gem-right {
+        width: 550px;
+        left: -145px;
+    }
+
+    .slot-machine {
+        left: -30px;
+        width: 300px;
+    }
+
+}
+
+@media screen and (max-width: 1249px) {
+    .logo {
+        width: 250px;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .gem-right {
+        width: 427px;
+        top: 141px;
+        left: -166px;
+    }
+
+    .gem-left {
+        width: 406px;
+        top: 366px;
+        left: -26px;
+    }
+
+    .octopus {
+        width: 200px;
+        right: -161px;
+        bottom: -80px;
+    }
+
+    .slot-machine {
+        width: 255px;
+        top: 140px;
+        left: -75px;
+    }
+}
+
+@media screen and (max-width: 992px) {}
