@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Bold';
+    src: url(/assets/fonts/FiraSans/Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Black';
+    src: url(/assets/fonts/FiraSans/Black.ttf);
+    font-weight: 900;
+}
+
+
+
+
+
+
+/* ------------------------- general  ------------------------- */
+body {
+    background: url("/assets/img/bg.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.container {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+    background: #FF7E00;
+    display: inline-block;
+    padding: 5px 47px;
+    border-radius: 8px;
+    opacity: 1;
+    transition: all .7s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: .7;
+    transition: all .7s ease;
+}
+
+/* ------------------------- header  ------------------------- */
+.header {
+    text-align: center;
+}
+
+.logo {
+    position: relative;
+    /* left: 150px; */
+    top: 30px;
+    margin-bottom: 30px;
+}
+
+
+/* ------------------------- main  ------------------------- */
+.main-content {
+    display: flex;
+    justify-content: space-evenly;
+    /* position: relative; */
+}
+
+.main-content-inner {
+    position: relative;
+}
+
+.main-content-text {
+    position: relative;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; */
+}
+
+.main-title {
+    font-family: 'Black', sans-serif;
+    text-align: center;
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 87px;
+    background: linear-gradient(180deg, #E9661C 0%, #FFC20E 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title-big {
+    font-size: 84px;
+}
+
+.main-subtitle {
+    margin-bottom: 50px;
+}
+
+.main-desc {
+    color: #fff;
+    text-align: center;
+    font-family: 'Bold', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 8px;
+    margin-bottom: 70px;
+}
+
+.main-desc .title-big {
+    font-size: 56px;
+}
+
+.main-link {
+    color: #F4FBE0;
+    text-align: center;
+    font-family: 'Bold', sans-serif;
+    font-weight: 700;
+
+    font-size: 32px;
+    line-height: 70px;
+    display: inline-block;
+    width: 100%;
+}
+
+.gem-left {
+    position: absolute;
+    top: 400px;
+    left: -190px;
+}
+
+.octopus {
+    position: absolute;
+    right: -170px;
+    bottom: -45px;
+}
+
+.main-content-image {
+    position: relative;
+
+}
+
+.slot-machine {
+    position: relative;
+    top: 95px;
+    left: 20px;
+}
+
+.gem-right {
+    position: absolute;
+    top: 135px;
+    left: -180px;
+}
+
+/* создаем ключевую анимацию для элемента */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        /* начальная позиция элемента */
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* задаем направление и длину парения элемента */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* возвращаем элемент в исходную позицию */
+    }
+}
+
+/* применяем анимацию к элементу */
+.element {
+    animation: float 3s ease-in-out infinite;
+    /* 3s - время одного цикла анимации, ease-in-out - для плавного старта и остановки, infinite - для бесконечного повторения */
+}
