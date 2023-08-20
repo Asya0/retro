@@ -78,9 +78,9 @@ a {
     justify-content: space-evenly;
 }
 
-.main-content-inner {
+/* .main-content-inner {
     position: relative;
-}
+} */
 
 .main-content-text {
     position: relative;
@@ -313,7 +313,7 @@ a {
 }
 
 @media screen and (max-width: 1249px) {
-    container {
+    .container {
         padding: 0 15px;
     }
 
@@ -327,10 +327,6 @@ a {
         display: flex;
         justify-content: space-evenly;
         gap: 70px;
-    }
-
-    .main-title {
-        /* font-size: 34px; */
     }
 
     .title-big {
@@ -376,7 +372,7 @@ a {
     } */
     .octopus {
         width: 201px;
-        right: 260px;
+        right: 295px;
         bottom: 305px;
     }
 
@@ -388,7 +384,7 @@ a {
 
     .gem-right {
         width: 492px;
-        left: -84px;
+        left: -87px;
     }
 
     .gem-left {
@@ -448,13 +444,16 @@ a {
         left: -115px;
     }
 
-    .octopus {
+    /* .octopus {
         left: 195px;
     }
 
     .slot-machine {
         left: 390px;
+    }
 
+    .slot-machine-block {
+        position: relative;
     }
 
     .gem-right {
@@ -479,33 +478,20 @@ a {
         bottom: 347px;
         right: 119px;
         z-index: 2;
-    }
+    } */
 
-}
 
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 182px;
+    .octopus {
+        right: 155px;
+        bottom: 223px;
     }
 
     .slot-machine {
-        width: 175px;
+        left: 117px;
     }
 
-    .octopus {
-        width: 155px;
-    }
-
-    .logo {
-        left: -115px;
-    }
-
-    .octopus {
-        left: 195px;
-    }
-
-    .slot-machine {
-        left: 395px;
+    .slot-machine-block {
+        position: relative;
     }
 
     .gem-right {
@@ -520,16 +506,155 @@ a {
         display: flex;
         position: absolute;
         top: -57px;
-        right: 102px;
+        right: -174px;
+        width: 334px;
     }
 
     .gem-left-mobile {
         display: flex;
         position: absolute;
-        bottom: 347px;
-        right: 119px;
+        bottom: 92px;
+        right: -131px;
         z-index: 2;
     }
+
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 182px;
+        margin-bottom: 20px;
+    }
+
+    .main-content {
+        gap: 25px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .title-big {
+        font-size: 46px;
+    }
+
+    .main-desc .title-big {
+        font-size: 36px;
+    }
+
+    .main-link {
+        font-size: 29px;
+    }
+
+    .main-content-image {
+        display: flex;
+        top: 80px;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .btn {
+        padding: 5px 40px;
+    }
+
+    .slot-machine {
+        width: 175px;
+        left: 381px;
+    }
+
+    .octopus {
+        width: 155px;
+        left: 155px;
+    }
+
+    .logo {
+        left: -115px;
+    }
+
+    .octopus {
+        left: -95px;
+    }
+
+    .gem-right {
+        display: none;
+    }
+
+    .gem-left {
+        display: none;
+    }
+
+    .gem-right-mobile {
+        display: flex;
+        position: absolute;
+        top: -94px;
+        right: -108px;
+        width: 240px;
+    }
+
+    .gem-left-mobile {
+        display: flex;
+        position: absolute;
+        bottom: 65px;
+        right: -100px;
+        z-index: 2;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        left: -75px;
+    }
+
+    .gem-right-mobile {
+        display: flex;
+        position: absolute;
+        top: -94px;
+        right: -75px;
+        width: 214px;
+    }
+
+    .octopus {
+        left: -95px;
+        width: 136px;
+        bottom: 189px;
+    }
+
+    .slot-machine {
+        width: 158px;
+        left: 53px;
+        top: -153px;
+    }
+
+    .gem-left-mobile {
+        display: flex;
+        position: absolute;
+        bottom: 70px;
+        right: -68px;
+        z-index: 2;
+    }
+
+    .main-title {
+        font-size: 25px;
+    }
+
+    .title-big {
+        font-size: 36px;
+    }
+
+    .main-desc {
+        font-size: 20px;
+    }
+
+    .main-desc .title-big {
+        font-size: 26px;
+    }
+
+    .main-link {
+        font-size: 25px;
+    }
+
 
 
 }
