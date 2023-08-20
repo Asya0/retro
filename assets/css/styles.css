@@ -138,27 +138,68 @@ a {
     left: -165px;
 }
 
-.octopus {
+.gem-left-mobile {
+    display: none;
+}
+
+/* старый вариант */
+
+/* .octopus {
     position: absolute;
     right: -170px;
     bottom: -45px;
-}
+} */
+/* octopus который вместе со слот машиной */
+
 
 .main-content-image {
     position: relative;
 }
 
-.slot-machine {
+/* старый вариант */
+/* .slot-machine {
     position: relative;
     top: 95px;
     left: 20px;
-}
+} 
+
+
 
 .gem-right {
     position: absolute;
     top: 120px;
     left: -190px;
 }
+*/
+/* если переместить осьминога к слот машине, то вот код ниже */
+.logo {
+    left: -287px;
+}
+
+.octopus {
+    position: absolute;
+    right: 320px;
+    bottom: 250px;
+}
+
+.slot-machine {
+    position: relative;
+    top: -131px;
+    left: 10px;
+}
+
+.gem-right {
+    position: absolute;
+    top: -175px;
+    left: -155px;
+}
+
+.gem-right-mobile {
+    display: none;
+}
+
+
+
 
 /* создаем ключевую анимацию для элемента */
 @keyframes float {
@@ -184,6 +225,19 @@ a {
     /* 3s - время одного цикла анимации, ease-in-out - для плавного старта и остановки, infinite - для бесконечного повторения */
 }
 
+/* для нового варианта */
+@media screen and (max-width: 1600px) {
+    .gem-right {
+        top: -181px;
+        left: -189px;
+    }
+
+    .slot-machine {
+        left: 25px;
+    }
+}
+
+/*  */
 @media screen and (max-width: 1439px) {
     .main-content {
         display: flex;
@@ -211,11 +265,12 @@ a {
         font-size: 64px;
     }
 
+    /* 
     .octopus {
         width: 235px;
         right: -206px;
         bottom: -10px;
-    }
+    } 
 
     .gem-left {
         width: 650px;
@@ -230,19 +285,72 @@ a {
         left: -30px;
         width: 300px;
     }
+*/
+    /* измененная версия */
+
+    .octopus {
+        width: 235px;
+        right: 334px;
+        bottom: 267px;
+    }
+
+    .slot-machine {
+        left: -30px;
+        width: 300px;
+    }
+
+    .gem-right {
+        width: 550px;
+        left: -145px;
+    }
+
+    .gem-left {
+        width: 650px;
+        left: -140px;
+    }
+
 
 }
 
 @media screen and (max-width: 1249px) {
+    container {
+        padding: 0 15px;
+    }
+
     .logo {
         width: 250px;
+        left: -225px;
+        margin-bottom: 70px;
     }
 
     .main-content {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        gap: 70px;
     }
 
+    .main-title {
+        /* font-size: 34px; */
+    }
+
+    .title-big {
+        font-size: 50px;
+    }
+
+    .main-desc {
+        font-size: 30px;
+    }
+
+    .main-desc .title-big {
+        font-size: 46px;
+    }
+
+    .main-link {
+        font-size: 20px;
+    }
+
+
+    /* 
     .gem-right {
         width: 427px;
         top: 141px;
@@ -265,7 +373,163 @@ a {
         width: 255px;
         top: 140px;
         left: -75px;
+    } */
+    .octopus {
+        width: 201px;
+        right: 260px;
+        bottom: 305px;
+    }
+
+    .slot-machine {
+        left: 18px;
+        width: 300px;
+        top: -223px;
+    }
+
+    .gem-right {
+        width: 492px;
+        left: -84px;
+    }
+
+    .gem-left {
+        width: 579px;
+        left: -113px;
+    }
+
+
+}
+
+@media screen and (max-width: 1024px) {
+    .main-subtitle {
+        margin-bottom: 35px;
+    }
+
+    .slot-machine {
+        left: 27px;
+        width: 233px;
+        top: -153px;
+    }
+
+    .octopus {
+        width: 184px;
+        right: 238px;
+        bottom: 202px;
+    }
+
+    .gem-right {
+        width: 422px;
+        left: -84px;
+    }
+
+    .gem-left {
+        width: 495px;
+        left: -113px;
+        top: 348px;
     }
 }
 
-@media screen and (max-width: 992px) {}
+@media screen and (max-width: 992px) {
+    body {
+        background: url("/assets/img/bg-mobile.png") no-repeat center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .main-content {
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+
+    /* .main-content-text {
+        top: -100px;
+    } */
+
+    .logo {
+        left: -115px;
+    }
+
+    .octopus {
+        left: 195px;
+    }
+
+    .slot-machine {
+        left: 390px;
+
+    }
+
+    .gem-right {
+        display: none;
+    }
+
+    .gem-left {
+        display: none;
+    }
+
+    .gem-right-mobile {
+        display: flex;
+        position: absolute;
+        top: -57px;
+        right: 131px;
+        width: 334px;
+    }
+
+    .gem-left-mobile {
+        display: flex;
+        position: absolute;
+        bottom: 347px;
+        right: 119px;
+        z-index: 2;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 182px;
+    }
+
+    .slot-machine {
+        width: 175px;
+    }
+
+    .octopus {
+        width: 155px;
+    }
+
+    .logo {
+        left: -115px;
+    }
+
+    .octopus {
+        left: 195px;
+    }
+
+    .slot-machine {
+        left: 395px;
+    }
+
+    .gem-right {
+        display: none;
+    }
+
+    .gem-left {
+        display: none;
+    }
+
+    .gem-right-mobile {
+        display: flex;
+        position: absolute;
+        top: -57px;
+        right: 102px;
+    }
+
+    .gem-left-mobile {
+        display: flex;
+        position: absolute;
+        bottom: 347px;
+        right: 119px;
+        z-index: 2;
+    }
+
+
+}
