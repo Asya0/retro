@@ -1,33 +1,47 @@
 @font-face {
-    font-family: 'Bold';
-    src: url(/fonts/FiraSans/FiraSans-Bold.ttf);
+    font-family: 'Firasans';
+    src: url(../../fonts/FiraSans/FiraSans-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Black';
-    src: url(/fonts/FiraSans/FiraSans-Black.ttf);
+    font-family: 'Firasans';
+    src: url(../../fonts/FiraSans/FiraSans-Black.ttf);
     font-weight: 900;
 }
 
+html {
+    overflow: hidden;
+}
 
-
-
-
-
-/* ------------------------- general  ------------------------- */
 body {
-    background: url("/assets/img/bg.png") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 100vh;
     height: 100vh;
+    margin: 0;
+}
+
+.landing-first {
+    background-image: url("../img/bg.png");
+}
+
+.landing-second {
+    background-image: url("../img/landing2-bg.jpg");
+}
+
+.landing-third {
+    background-image: url("../img/landing3-bg.jpg");
+    background-position: top;
 }
 
 .container {
-    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
     padding: 0 30px;
+    height: 100%;
 }
 
 a {
@@ -42,619 +56,286 @@ a {
     text-transform: lowercase;
 }
 
-.btn {
-    position: relative;
-    z-index: 1;
-    background: #FF7E00;
-    display: inline-block;
-    padding: 5px 75px;
-    border-radius: 8px;
-    opacity: 1;
-    transition: all .7s ease;
-    cursor: pointer;
-}
-
-.btn:hover {
-    opacity: .7;
-    transition: all .7s ease;
-}
-
-/* ------------------------- header  ------------------------- */
-.header {
-    text-align: center;
-}
-
 .logo {
     position: relative;
-    /* left: 150px; */
-    top: 30px;
+    width: 15.365vw;
     margin-bottom: 30px;
 }
 
+.main {
+    padding: 60px 0;
+    height: calc(100% - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-/* ------------------------- main  ------------------------- */
-.main-content {
+.main__content {
     display: flex;
     justify-content: space-evenly;
+    height: 100%;
 }
 
-/* .main-content-inner {
-    position: relative;
-} */
-
-.main-content-text {
-    position: relative;
+.main__content-inner {
     text-align: center;
-
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.main-title {
-    font-family: 'Black', sans-serif;
-    text-align: center;
-    font-size: 56px;
-    line-height: 87px;
+.main__content-text {
+    position: relative;
+}
+
+.main__title {
+    font-family: 'Firasans', sans-serif;
+    font-size: 2.917vw;
+    line-height: 1;
     background: linear-gradient(180deg, #E9661C 30%, #FFC20E 70%);
-    /* background: linear-gradient(180deg, rgb(233, 102, 28) 6%, rgb(255, 194, 14) 89%); */
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin: 0;
 }
 
-.title-big {
-    font-size: 84px;
+.title__big {
+    font-size: 4.375vw;
 }
 
-.main-subtitle {
+.main__subtitle {
     margin-bottom: 50px;
 }
 
-.main-desc {
+.main__desc {
     color: #fff;
-    text-align: center;
-    font-family: 'Bold', sans-serif;
-    font-size: 48px;
-    line-height: 8px;
-    margin-bottom: 70px;
+    font-family: 'Firasans', sans-serif;
+    font-size: 2.500vw;
+    margin-bottom: 3.646vw;
 }
 
-.main-desc .title-big {
-    font-size: 56px;
-}
-
-.main-link {
+.main__link {
+    border-radius: 8px;
+    background: #FF7E00;
     color: #F4FBE0;
-    text-align: center;
-    font-family: 'Bold', sans-serif;
-
-    font-size: 32px;
-    line-height: 70px;
+    font-family: 'Firasans', sans-serif;
+    font-size: 1.667vw;
     display: inline-block;
-    width: 100%;
+    padding: 2.39vh 3.854vw;
+    transition: opacity .7s ease;
+}
+
+.main__link:hover {
+    opacity: .7;
+}
+
+.main__content-image {
+    position: relative;
+    flex: 1;
+}
+
+.octopus {
+    position: absolute;
+    left: -14vw;
+    bottom: 20px;
+    width: 15.052vw;
+}
+
+.slot-machine {
+    position: relative;
+    width: 17.656vw;
 }
 
 .gem-left {
     position: absolute;
-    top: 400px;
-    left: -165px;
+    bottom: 0;
+    left: 0;
+    width: 45.052vw;
 }
 
 .gem-left-mobile {
     display: none;
 }
 
-/* старый вариант */
-
-/* .octopus {
-    position: absolute;
-    right: -170px;
-    bottom: -45px;
-} */
-/* octopus который вместе со слот машиной */
-
-
-.main-content-image {
-    position: relative;
-}
-
-/* старый вариант */
-/* .slot-machine {
-    position: relative;
-    top: 95px;
-    left: 20px;
-} 
-
-
-
 .gem-right {
     position: absolute;
-    top: 120px;
-    left: -190px;
-}
-*/
-/* если переместить осьминога к слот машине, то вот код ниже */
-.logo {
-    left: -287px;
-}
-
-.octopus {
-    position: absolute;
-    right: 320px;
-    bottom: 250px;
-}
-
-.slot-machine {
-    position: relative;
-    top: -131px;
-    left: 10px;
-}
-
-.gem-right {
-    position: absolute;
-    top: -175px;
-    left: -155px;
+    top: 15vh;
+    right: 6vw;
+    width: 36.667vw;
 }
 
 .gem-right-mobile {
     display: none;
 }
 
+.slot__machine-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-/* создаем ключевую анимацию для элемента */
 @keyframes float {
     0% {
         transform: translateY(0);
-        /* начальная позиция элемента */
     }
 
     50% {
         transform: translateY(-10px);
-        /* задаем направление и длину парения элемента */
     }
 
     100% {
         transform: translateY(0);
-        /* возвращаем элемент в исходную позицию */
     }
 }
 
-/* применяем анимацию к элементу */
 .element {
     animation: float 3s ease-in-out infinite;
-    /* 3s - время одного цикла анимации, ease-in-out - для плавного старта и остановки, infinite - для бесконечного повторения */
 }
 
-/* для нового варианта */
-@media screen and (max-width: 1600px) {
-    .gem-right {
-        top: -181px;
-        left: -189px;
-    }
-
-    .slot-machine {
-        left: 25px;
-    }
+.mobile-hidden {
+    display: block;
 }
 
-/*  */
-@media screen and (max-width: 1439px) {
-    .main-content {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .main-title {
-        font-size: 36px;
-        line-height: 65px;
-    }
-
-    .main-subtitle {
-        margin-bottom: 45px;
-    }
-
-    .main-desc {
-        margin-bottom: 50px;
-    }
-
-    .main-link {
-        font-size: 25px;
-    }
-
-    .title-big {
-        font-size: 64px;
-    }
-
-    /* 
-    .octopus {
-        width: 235px;
-        right: -206px;
-        bottom: -10px;
-    } 
-
-    .gem-left {
-        width: 650px;
-    }
-
-    .gem-right {
-        width: 550px;
-        left: -145px;
-    }
-
-    .slot-machine {
-        left: -30px;
-        width: 300px;
-    }
-*/
-    /* измененная версия */
-
-    .octopus {
-        width: 235px;
-        right: 334px;
-        bottom: 267px;
-    }
-
-    .slot-machine {
-        left: -30px;
-        width: 300px;
-    }
-
-    .gem-right {
-        width: 550px;
-        left: -145px;
-    }
-
-    .gem-left {
-        width: 650px;
-        left: -140px;
-    }
-
-
+.desktop-hidden {
+    display: none;
 }
 
-@media screen and (max-width: 1249px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .logo {
-        width: 250px;
-        left: -225px;
-        margin-bottom: 70px;
-    }
-
-    .main-content {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 70px;
-    }
-
-    .title-big {
-        font-size: 50px;
-    }
-
-    .main-desc {
-        font-size: 30px;
-    }
-
-    .main-desc .title-big {
-        font-size: 46px;
-    }
-
-    .main-link {
-        font-size: 20px;
-    }
-
-
-    /* 
-    .gem-right {
-        width: 427px;
-        top: 141px;
-        left: -166px;
-    }
-
-    .gem-left {
-        width: 406px;
-        top: 366px;
-        left: -26px;
-    }
-
-    .octopus {
-        width: 200px;
-        right: -161px;
-        bottom: -80px;
-    }
-
-    .slot-machine {
-        width: 255px;
-        top: 140px;
-        left: -75px;
-    } */
-    .octopus {
-        width: 201px;
-        right: 295px;
-        bottom: 305px;
-    }
-
-    .slot-machine {
-        left: 18px;
-        width: 300px;
-        top: -223px;
-    }
-
-    .gem-right {
-        width: 492px;
-        left: -87px;
-    }
-
-    .gem-left {
-        width: 579px;
-        left: -113px;
-    }
-
-
+.text-left {
+    text-align: left;
 }
 
-@media screen and (max-width: 1024px) {
-    .main-subtitle {
-        margin-bottom: 35px;
-    }
-
-    .slot-machine {
-        left: 27px;
-        width: 233px;
-        top: -153px;
-    }
-
-    .octopus {
-        width: 184px;
-        right: 238px;
-        bottom: 202px;
-    }
-
-    .gem-right {
-        width: 422px;
-        left: -84px;
-    }
-
-    .gem-left {
-        width: 495px;
-        left: -113px;
-        top: 348px;
-    }
+.landing-second .octopus {
+    left: -13vw;
+    bottom: -2vw;
+    width: 55.052vw;
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1240px) {}
+
+@media screen and (max-width: 767px) {
+    html {
+        overflow: unset;
+    }
+
     body {
-        background: url("/assets/img/bg-mobile.png") no-repeat center;
-        background-size: cover;
-        background-attachment: fixed;
+        height: unset;
+        min-height: 100vh;
     }
 
-    .main-content {
+    .landing-second {
+        background-image: url(../img/landing2-bg-mobile.jpg);
+        background-position: top;
+    }
+
+    .landing-third {
+        background-image: url(../img/landing3-bg-mobile.jpg);
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+
+    .desktop-hidden {
+        display: block;
+    }
+
+    .main {
+        padding-top: 30px;
+        height: calc(100vh - 120px);
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .main__content {
         flex-direction: column-reverse;
-        gap: 0;
     }
 
-    /* .main-content-text {
-        top: -100px;
-    } */
-
-    .logo {
-        left: -115px;
-    }
-
-    /* .octopus {
-        left: 195px;
+    .main__content-image {
+        display: flex;
+        align-items: flex-start;
     }
 
     .slot-machine {
-        left: 390px;
+        width: 43.333vw;
     }
-
-    .slot-machine-block {
-        position: relative;
-    }
-
-    .gem-right {
-        display: none;
-    }
-
-    .gem-left {
-        display: none;
-    }
-
-    .gem-right-mobile {
-        display: flex;
-        position: absolute;
-        top: -57px;
-        right: 131px;
-        width: 334px;
-    }
-
-    .gem-left-mobile {
-        display: flex;
-        position: absolute;
-        bottom: 347px;
-        right: 119px;
-        z-index: 2;
-    } */
-
 
     .octopus {
-        right: 155px;
-        bottom: 223px;
+        width: 36.905vw;
+        top: 20vh;
+        bottom: auto;
+        left: 0;
     }
 
-    .slot-machine {
-        left: 117px;
-    }
-
-    .slot-machine-block {
-        position: relative;
-    }
-
-    .gem-right {
-        display: none;
-    }
-
-    .gem-left {
-        display: none;
-    }
-
-    .gem-right-mobile {
-        display: flex;
-        position: absolute;
-        top: -57px;
-        right: -174px;
-        width: 334px;
-    }
-
-    .gem-left-mobile {
-        display: flex;
-        position: absolute;
-        bottom: 92px;
-        right: -131px;
-        z-index: 2;
-    }
-
-}
-
-@media screen and (max-width: 768px) {
     .logo {
-        width: 182px;
-        margin-bottom: 20px;
+        width: 43.333vw;
     }
 
-    .main-content {
-        gap: 25px;
+    .slot__machine-block {
+        margin-top: 50px;
     }
 
-    .main-title {
+    .main__desc,
+    .main__title {
         font-size: 34px;
     }
 
-    .title-big {
-        font-size: 46px;
+    .title__big {
+        font-size: 48px;
     }
 
-    .main-desc .title-big {
-        font-size: 36px;
+    .main__link {
+        font-size: 28px;
+        padding: 20px 40px;
     }
 
-    .main-link {
-        font-size: 29px;
+    .main__desc {
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
 
-    .main-content-image {
-        display: flex;
-        top: 80px;
+    .landing-second .octopus {
         left: 0;
-        margin: 0 auto;
+        bottom: 0vw;
+        width: 100vw;
+        top: -4vw;
     }
 
-    .btn {
-        padding: 5px 40px;
+    .landing-second .main__content-text {
+        margin-top: 15vh;
     }
 
-    .slot-machine {
-        width: 175px;
-        left: 381px;
+    .main__content-inner.text-left {
+        text-align: center;
     }
-
-    .octopus {
-        width: 155px;
-        left: 155px;
-    }
-
-    .logo {
-        left: -115px;
-    }
-
-    .octopus {
-        left: -95px;
-    }
-
-    .gem-right {
-        display: none;
-    }
-
-    .gem-left {
-        display: none;
-    }
-
-    .gem-right-mobile {
-        display: flex;
-        position: absolute;
-        top: -94px;
-        right: -108px;
-        width: 240px;
-    }
-
-    .gem-left-mobile {
-        display: flex;
-        position: absolute;
-        bottom: 65px;
-        right: -100px;
-        z-index: 2;
-    }
-
-
 }
 
-@media screen and (max-width: 768px) {
-    .logo {
-        left: -75px;
-    }
-
-    .gem-right-mobile {
-        display: flex;
-        position: absolute;
-        top: -94px;
-        right: -75px;
-        width: 214px;
-    }
-
-    .octopus {
-        left: -95px;
-        width: 136px;
-        bottom: 189px;
-    }
-
-    .slot-machine {
-        width: 158px;
-        left: 53px;
-        top: -153px;
-    }
-
-    .gem-left-mobile {
-        display: flex;
-        position: absolute;
-        bottom: 70px;
-        right: -68px;
-        z-index: 2;
-    }
-
-    .main-title {
-        font-size: 25px;
-    }
-
-    .title-big {
+@media screen and (max-width: 414px) {
+    .title__big {
         font-size: 36px;
     }
 
-    .main-desc {
-        font-size: 20px;
+    .main__link {
+        padding: 15px 20px;
     }
 
-    .main-desc .title-big {
-        font-size: 26px;
+    .main__content-image {
+        justify-content: space-between;
     }
 
-    .main-link {
-        font-size: 25px;
+    .slot-machine {
+        width: 33vw;
     }
 
+    .octopus {
+        width: 30vw;
+        top: 25vh;
+    }
 
-
+    .main__content-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
